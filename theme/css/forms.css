@@ -1,0 +1,44 @@
+ /* main form */
+.search_overlay form { background: none; box-shadow: none; top: 25%; }
+
+/* form elements */
+.oreka_search_form { margin-top:2em; position: relative; }
+.oreka_search_form #oreka-search-field { width: 100%; border: none; font-family: Yekan,IRANSans,Tahoma; height: 45px; font-size: 15px; background-color: white; border-radius: 5px; color: black; box-sizing: border-box; border:1px solid #ccc; padding-right: 45px; }
+.oreka_search_form #oreka-search-submit { position: absolute; font-family: Yekan,IRANSans,Tahoma; width: 85px; height: 39px; background-color: #a1214e; left: 3px; top: 3px; border: none; padding: 0; border-radius: 5px; color: #ffffff; text-align: center; font-weight: bold; line-height: 5px; font-size: 18px; }
+.oreka_search_form #oreka-search-submit img { position: absolute; left: 82px; height: 39px; top: 0px; }
+.oreka_search_form #oreka-search-icon { position: absolute; right: 0; top: 0; background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0xNS44NTMgMTYuNTZjLTEuNjgzIDEuNTE3LTMuOTExIDIuNDQtNi4zNTMgMi40NC01LjI0MyAwLTkuNS00LjI1Ny05LjUtOS41czQuMjU3LTkuNSA5LjUtOS41IDkuNSA0LjI1NyA5LjUgOS41YzAgMi40NDItLjkyMyA0LjY3LTIuNDQgNi4zNTNsNy40NCA3LjQ0LS43MDcuNzA3LTcuNDQtNy40NHptLTYuMzUzLTE1LjU2YzQuNjkxIDAgOC41IDMuODA5IDguNSA4LjVzLTMuODA5IDguNS04LjUgOC41LTguNS0zLjgwOS04LjUtOC41IDMuODA5LTguNSA4LjUtOC41eiIvPjwvc3ZnPg==); background-repeat: no-repeat; background-position: center center; background-size: 50%; width: 44px; height: 44px; }
+
+/* form auto complete overlay */
+.oreka_search_form .oreka_overlay_container { width: 100%; position: relative; z-index:99999; border-left: 1px solid transparent; border-right: 1px solid transparent; }
+.oreka_search_form .oreka_overlay_container .oreka_overlay { position: absolute; width: 100%; left: 0; top: 0; max-height: 300px; background-color: #144372; padding: 1em; color: white; font-size: 1.2em; overflow: auto; border-radius: 5px; }
+.oreka_search_form .oreka_overlay_container .oreka_overlay span { display: block; }
+.oreka_search_form .oreka_overlay_container .oreka_overlay a { display: inline-block; color: white; line-height: 2em; cursor: pointer; }
+.oreka_search_form .oreka_overlay_container .oreka_overlay .loading { text-align: center; padding: 0.5em; border-radius: 4px; font-weight: bold; }
+.oreka_search_form .oreka_overlay_container .oreka_overlay .noresult { text-align: center; padding: 0.5em; border-radius: 4px; font-weight: bold; }
+.oreka_search_form .oreka_overlay_container .oreka_overlay .copyright { color: #ffffff; font-size: 10px; margin-top: 1em; float: left; border-top: 1px solid #a1214e; padding-top: 0.5em; }
+.oreka_search_form .oreka_overlay_container .oreka_overlay .copyright a { color: #ffffff; }
+
+/* hide overlay while loading */
+.oreka_search_form .oreka_overlay_container { display:none; }
+.oreka_search_form.loaded .oreka_overlay_container { display:inherit; }
+
+/* overlay fade animation */
+.oreka_search_form .oreka_overlay_container .fade-enter-active{ transition: opacity .5s; }
+.oreka_search_form .oreka_overlay_container .fade-leave-active { transition: opacity .5s; }
+.oreka_search_form .oreka_overlay_container .fade-enter { opacity: 0; }
+.oreka_search_form .oreka_overlay_container .fade-leave-to { opacity: 0; }
+.oreka_search_form .oreka_overlay_container .fade-leave-active { opacity: 0; }
+
+/* responsive fix */
+@media only screen and (min-width: 1000px) { .my_sticky .search_overlay form { top: 12px; } }
+@media only screen and (max-width: 765px) {
+  .oreka_search_form #oreka-search-field { height: 30px; font-size: 12px; padding-right: 30px; }
+  .oreka_search_form #oreka-search-submit { width: 70px; height: 26px; line-height: 4px; font-size: 15px; }
+  .oreka_search_form #oreka-search-submit img { left: 65px; height: 26px; top: 0px; }
+  .oreka_search_form #oreka-search-icon { width: 33px; height: 33px; }
+}
+
+/* search form placeholder text color */
+.oreka_search_form ::placeholder { color: black; opacity: 1;  }
+.oreka_search_form :-ms-input-placeholder { color: black; }
+.oreka_search_form ::-ms-input-placeholder { color: black; }
